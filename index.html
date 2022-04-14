@@ -1,0 +1,23 @@
+<head>
+<title>ハングルジュンソンフィラー</title>
+</head>
+<body>
+    〜〜〜
+<!-- コピー対象要素とコピーボタン -->
+<input id="copyTarget" type="text" value="ᅠ" readonly>
+<button onclick="copyToClipboard()">Copy text</button>
+    〜〜〜
+<!-- bodyタグ内の下部に以下を入力する -->
+<script>
+function copyToClipboard() {
+// コピー対象をJavaScript上で変数として定義する
+var copyTarget = document.getElementById("copyTarget");
+// コピー対象のテキストを選択する
+copyTarget.select();
+// 選択しているテキストをクリップボードにコピーする
+document.execCommand("Copy");
+// コピーをお知らせする
+alert("コピーできました！ : " + copyTarget.value);
+}
+</script>
+</body>
